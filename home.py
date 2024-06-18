@@ -7,7 +7,7 @@ class Todo(object):
 
     def __str__(self):
         prio_text = "High" if self.hasPriority else "Low"
-        return "ToDo: {0}, Priority: {1} ".format(self.todoDesc, prio_text)
+        return "To do first: {0}, Priority: {1} ".format(self.todoDesc, prio_text)
     
 todo_queue = deque()
 
@@ -25,11 +25,10 @@ def print_todos():
         print(f"{i}. {t.todoDesc}")
 
 def main():
-    print(todo_queue)
-    add_todo(Todo("First todo without prio"))
-    add_todo(Todo("Second todo without prio"))
-    add_todo(Todo("Third todo with prio", True))
-    print(todo_queue)
+    print("To Do List:")
+    add_todo(Todo("Clean house"))
+    add_todo(Todo("Write a letter"))
+    add_todo(Todo("Go grocery shopping", True))
     print_todos()
     print(first_todo_inline())
     return
