@@ -35,6 +35,7 @@ def main():
         print("3. Get the first to-do in line")
         print("4. Exit")
         choice = input("Choose an option (1-4): ")
+        print()
 
         if choice == '1':
             desc = input("Enter the to-do description: ")
@@ -49,7 +50,7 @@ def main():
             else:
                 print("No to-dos in the list.")
         elif choice == '4':
-            print("Exiting To Do List Manager.")
+            print("Leave menu")
             break
         else:
             print("Invalid option, please choose again.")
